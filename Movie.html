@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie form</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: arial;
+        scroll-behavior: smooth;
+    }
+    body{
+        background-color: black;
+    }
+
+    
+    .logo{
+        position: absolute;
+        font-size: 55px;
+        font-weight: bold;
+        color:white;
+        left: 50px;
+        
+    }
+    nav{
+        display: flex;
+        gap: 40px;
+        padding: 30px;
+        justify-content: end;
+        font-weight: bold;
+        align-items: center;
+        
+    }
+    nav i{
+        color: white;
+        cursor: pointer;   
+    }
+    nav a{
+        color: white;
+        text-decoration: none;
+        margin-right: 50px; 
+        font-size: 20px; 
+    }
+    nav a:hover{
+        color: gold;
+    }
+    .icon{
+        font-size: 30px;
+        
+        cursor: pointer;
+        margin-right: 15px;
+
+    }
+    .icon:hover{
+        opacity: 0.7;
+    }
+    .image img{
+        position: relative;
+        width: 100%;
+        margin-bottom: 20px; 
+    }
+    .text h1{
+        position: absolute;
+        color: rgb(253, 18, 18);
+        top:180px;
+        left: 200px;
+        transform: translate(-50%,-50%);
+        text-shadow:2px 2px 5px black;
+        bottom: 50%;
+        font-size: 80px;
+        font-weight:900;
+        font-style: oblique;
+    }
+    .text p{
+        position: absolute;
+        top: 190px;
+        left: 50px;
+        color: rgba(255, 0, 0, 0.873);
+        font-size: 30px;
+        font-style: oblique;
+        font-weight: 900;
+    }
+    .text h2{
+        position: absolute;
+        top: 240px;
+        left: 50px;
+        color:rgb(25, 10, 10);
+        font-size: 20px;
+        font-style: oblique;    
+    }
+    .text h3{
+        position: absolute;
+        top: 270px;
+        left: 50px;
+        color:rgb(25, 10, 10);
+        font-size: 15px;
+        font-style: oblique;    
+    }
+    .btn{
+        padding: 12px;
+        border: none;
+        border-radius: 25px;
+        margin-right: 10px;
+    }
+    .watch{
+        padding: 20px;
+        font-size:x-large;
+        font-weight: bold;
+    }
+    .trailer{
+        padding: 20px;
+        font-size: x-large;
+        font-weight: bold;
+    }
+    section{
+        padding:50px ;
+    }
+    h2{
+    margin-bottom: 20px;
+    color: aliceblue;
+    margin-left: 50px;
+    }
+    .card{
+    background: rgb(21, 46, 63);
+    border: 1px solid;
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    }
+    .card-grid{
+    display: grid;
+    gap: 30px;
+    padding: 50px;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    }
+    .card img{
+    width: 100%;
+    height: 250px;
+    margin-bottom:10px;
+    }
+    .card:hover{
+        transform:scale(1.05)
+    }
+    .rating{
+        position: absolute;
+        background: gold;
+        padding: 10px;
+        border-radius: 10px;
+        font-weight: bold;
+        color: black;
+    }
+    .new{
+        position:absolute;
+        background: red;
+        border-radius: 20px;
+        font-weight: bold;
+        padding: 10px;
+    }
+    .watch-card{
+        background: rgb(21, 46, 63);;
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        width: 350px;
+        color: white;
+        margin-left: 50px;
+        font-size: 20px;
+    }
+    .watch-card img{
+        width: 100%;
+        height:200px ;
+    }
+    h1{
+        font-size: 25px;
+        color: rgb(255, 0, 0);
+        font-weight: bold;
+        text-shadow:2px 2px 5px black;
+    }
+    h3{
+        color: white;
+    }
+    p{
+        color: white;
+    }
+    footer{
+        padding: 40px;
+        text-align: center;
+        line-height: 2;
+        border: 1px solid white;
+    }
+</style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">MovieBlast</div>
+    <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="movies">Movies</a>
+    <a href="#shows">TV Shows</a>
+    <a href="#list">My List</a>
+    </div>
+    <div class="icon">
+        🔍
+    </div>
+    <div class="icon">
+        👤
+    </div>
+</nav>
+<div class="image">
+    <img src="darling.jpeg" alt="Movie Poster">
+    <div class="text">
+        <h1>SALAAR</h1>
+        <p>: PART 1 CEASEFIRE</p>
+        <h2>Description:</h2>
+        <h3>Salaar: Part 1 – Ceasefire is an action-packed movie about Deva,<br>
+            a brave and loyal warrior. He lives a peaceful life until he is 
+            forced<br>to protect Aadhya from dangerous enemies. As the story progresses,<br>
+            Deva's mysterious past is revealed. He reunites with his childhood friend<br> Varadha,
+            the prince of Khansaar. Together, they face political conspiracies<br>and
+            a fierce battle for the throne. The film highlights friendship,<br> loyalty, sacrifice,
+            and powerful action sequences.<br><br><br>
+        <button class="btn watch">Watch Now</button><br><br>
+        <button class="btn trailer">Trailer</button>
+        
+    </div>
+</div>
+<section>
+<h2>Trending Movies</h2>
+<div class="card-grid">
+<div class="card">
+    <div class="rating">10</div>
+    <img src="batman.jpeg" alt="Movie Poster">
+    <h3>The Dark Knight</h3>
+</div>
+<div class="card">
+    <div class="rating">9.8</div>
+    <img src="Interstellar.jpeg"  alt="Movie Poster">
+    <h3>Interstellar</h3>
+</div>
+<div class="card">
+    <div class="rating">9.5</div>
+    <img src="inception.jpeg"  alt="Movie Poster">
+    <h3>Inception</h3>
+</div>
+<div class="card">
+    <div class="rating">9</div>
+    <img src="begins.jpeg"  alt="Movie Poster">  
+    <h3>Batman Begins</h3>
+</div>
+<div class="card">
+    <div class="rating">8.5</div>
+    <img src="Oppenheimer.jpeg"  alt="Movie Poster">
+    <h3>Oppenheimer</h3>
+</div>
+</section>
+<sction>
+<h2>Popular Movies</h2>
+<div class="card-grid">
+    <div class="card">
+        <img src="batman.jpeg"  alt="Movie Poster">
+        <h3>The Dark Knight</h3>
+        <p>2008</p>
+    </div>
+    <div class="card">
+        <img src="inception.jpeg" alt="Movie Poster">
+        <h3>Inception</h3>
+        <p>2010</p>
+    </div>
+    <div class="card">
+        <img src="Interstellar.jpeg" alt="Movie Poster">
+        <h3>Interstellar</h3>
+        <p>2014</p>
+    </div>
+    <div class="card">
+        <img src="begins.jpeg" alt="Movie Poster">  
+        <h3>Batman Begins</h3>
+        <p>2005</p>
+    </div>
+    <div class="card">
+        <img src="Oppenheimer.jpeg" alt="Movie Poster">
+        <h3>Oppenheimer</h3>
+        <p>2023</p>
+    </div>
+</div>
+</sction>
+<section>
+<h2>Top Rated Movies</h2>
+<div class="card-grid">
+    <div class="card">
+        <div class="rating">IMDb Score : 9.1</div>
+        <img src="batman.jpeg" alt="Movie Poster">
+        <h3>The Dark Knight</h3>
+    </div>
+    <div class="card">
+        <div class="rating">IMDb Score : 8.8</div>
+        <img src="inception.jpeg" alt="Movie Poster">
+        <h3>Inception</h3>
+    </div>
+    <div class="card">
+        <div class="rating">IMDb Score : 8.7</div>
+    <img src="Interstellar.jpeg" alt="Movie Poster">
+    <h3>Interstellar</h3>
+    </div>
+    <div class="card">
+        <div class="rating">IMDb Score : 8.2</div>
+    <img src="begins.jpeg" alt="Movie Poster">
+    <h3>Batman Begins</h3>
+    </div>
+    <div class="card">
+        <div class="rating">IMDb Score : 8.2</div>
+    <img src="Oppenheimer.jpeg" alt="Movie Poster">
+    <h3>Oppenheimer</h3>
+    </div>
+</div>
+</section>
+<section>
+    <h2>Latest Releaseses</h2>
+    <div class="card-grid">
+        <div class="card">
+            <div class="new"> New </div>
+            <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/peddi-et00439772-1780481034.jpg" alt="movie poster">
+            <h3>Peddi</h3>
+        </div>
+        <div class="card">
+            <div class="new"> New </div>
+            <img src="https://i.pinimg.com/originals/e1/76/13/e176132fc18deb199c43e34f57655e49.jpg?nii=t" alt="Movie Poster">
+            <h3>Dhurandhar</h3>
+        </div>
+        <div class="card">
+            <div class="new"> New </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn-8KNSfP43oA15OBxO52tsUpaFzizgumqIvVYdWyl-g&s=10" alt="Movie Poster">
+            <h3>Dacoit</h3>
+        </div>
+        <div class="card">
+            <div class="new"> New </div>
+            <img src="https://i.redd.it/yl3vkwo6l0og1.jpeg" alt="Movie Poster">
+            <h3>Dhurandhar : The Revange</h3>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>Movie Categories</h2>
+<div class="card-grid">
+    <div class="card">
+        <h3>Action</h3>
+    </div>
+    <div class="card">
+        <h3>Thriller</h3>
+    </div>
+    <div class="card">
+        <h3>Comedy</h3>
+    </div>
+    <div class="card">
+        <h3>Si-Fi</h3>
+    </div>
+    <div class="card">
+        <h3>Drama</h3>
+    </div>
+    <div class="card">
+        <h3>Horror</h3>
+    </div>
+</div>
+</section>
+<section>
+    <h2>Continue Watching</h2>
+    <div class="watch-card">
+        <img src="darling.jpeg"  alt="Movie Poster">
+            <h3>Salaar</h3>
+            <p>20 mins remaining</p>
+            <br>
+            <input type="range" placeholder="continue">
+            <br>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>TV Shows</h2>
+    <div class="watch-card">
+        <img src="srthings" alt="Movie Poster">
+        <h3>Stranger Things</h3>
+        <p>4 Seasons | 34 Episodes</p>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>Upcoming Movie</h2>
+    <div class="watch-card">
+            <img src="avatar"  alt="Movie Poster">
+            <h3>Avatar 3</h3>
+            <p>Release Date:Dec 2026</p>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>Cast & Crew</h2>
+    <div class="card-grid">
+        <div class="card">
+            <img src="salaar"  alt="Movie Poster">
+            <h3>Prabhas</h3>
+            <br>
+            <h1>Deva</h1>
+        </div>
+         <div class="card">
+            <img src="salaar"  alt="Movie Poster">
+            <h3>Shruti Haasan</h3>
+            <br>
+            <h1>Aadhya</h1>
+        </div>
+         <div class="card">
+            <img src="salaar"  alt="Movie Poster">
+            <h3>Prithviraj Sukumaran</h3>
+            <br>
+            <h1>Varadharaja Mannar</h1>
+        </div>
+         <div class="card">
+            <img src="salaar" alt="movie poster">
+            <h3>Jagapathi Babu</h3>
+            <br>
+            <h1>Raja Mannar</h1>
+        </div>
+         <div class="card">
+            <img src="salaar" alt="movie poster">
+            <h3>Prashanth Neel</h3>
+            <br>
+            <h1>Director</h1>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>Subscription Plans</h2>
+    <div class="card-grid">
+        <div class="card">
+        <h3>Basic</h3>
+        <h1>$5</h1>
+        <p>720p Streaming</p>
+        </div>
+         <div class="card">
+        <h3>Standard</h3>
+        <h1>$10</h1>
+        <p>1080p Streaming</p>
+        </div>
+         <div class="card">
+        <h3>Premium</h3>
+        <h1>$15</h1>
+        <p>720p Streaming</p>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>Amazing Platform</h2>
+    <div class="card-grid">
+        <div class="card">
+            ⭐⭐⭐⭐⭐
+            <p>Amazing Platform</p>
+        </div>
+        <div class="card">
+            ⭐⭐⭐⭐⭐
+            <p>Best Streaming Experiance</p>
+        </div>
+        <div class="card">
+            ⭐⭐⭐⭐⭐
+            <p>Nice Platform</p>
+        </div>
+    </div>
+</section>
+<footer>
+    <h1>MovieBlast</h1>
+    <p>About | Contact | Privacy Policy</p>
+    <p>@2026 MovieBlast. All Rights Reserved</p>
+</footer>
+</body>
+</html>
